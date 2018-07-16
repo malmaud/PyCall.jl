@@ -364,6 +364,7 @@ function dlopen_libpython(python::String)
             try
                 return dlopen(joinpath(libpath, lib),
                               RTLD_LAZY|RTLD_DEEPBIND|RTLD_GLOBAL)
+            catch
             end
         end
     end
